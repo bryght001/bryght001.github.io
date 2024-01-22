@@ -1,0 +1,927 @@
+/* ============================================[[====
+=======]= Google icons variable styling =====
+ =============================================*/
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+
+
+
+/* =========================================================================
+============================== VARIABLE CSS ====================================
+============================================================================*/
+:root{
+  --header-bg-color: #F6A702;
+  --hero-bg-color: #F7A702;
+  --body-bg-color: #FFF1E6;
+  --section-bg-color: #F6A702;
+  --footer-bg-color: #0B0706;
+  
+  
+  --header-padding-margin: .9svh;
+  --hero-padding-margin: 7svh;
+  --body-padding-margin: 2svh;
+  --footer-padding-margin: 2svh;
+}
+
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: var(--body-bg-color);
+  scroll-behavior: smooth;
+}
+
+.headings{
+  text-align: center;
+}
+
+
+
+
+/* ========================================================================
+======================= Header styling goes in after this ===============================
+==========================================================================*/
+.navheader{
+  border-bottom: .2svh solid var(--body-bg-color);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #f6a702;
+  height: 10svh;
+  padding: var(--header-padding-margin);
+  z-index: 500;
+}
+
+.navigation{
+  padding-left: .9svh;
+  display: flex;
+  gap: 1svh;
+  justify-content: start;
+  align-items: center;
+}
+
+#logo{
+  width: 5svh;
+  height: 5svh;
+}
+
+#brand__name{
+  color: var(--body-bg-color);
+  padding-right: 15svh;
+  padding-left: 5svh;
+  font-family: system-ui, Sans-Serif;
+  font-weight: 700;
+  font-size: 2.5svh;
+}
+
+#nav__list{
+  color: #000;
+  padding: 2svh;
+  border-bottom: 2px solid #F6A702;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 1s;
+  transition-delay: .2s;
+  transition-timing-function: ease-in;
+}
+
+#nav__list:hover{
+  color: var(--body-bg-color);
+  background-color: var(--section-bg-color);
+  cursor: pointer;
+}
+
+#nav__links{
+  text-decoration: none;
+  color: #000;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+  font-weight: 400;
+  font-size: 2svh;
+  transition: background-color 1s;
+  transition-delay: .2s;
+  transition-timing-function: ease-in;
+}
+
+#nav__links:visited{
+  color: #000000;
+  cursor: pointer;
+}
+
+#nav__links:hover{
+  color: var(--body-bg-color);
+  background-color: var(--section-bg-color);
+  cursor: pointer;
+}
+
+
+#toggle__btn{
+  position: relative;
+  border: 2px solid #ffffff;
+  background-color: none;
+  width: 5svh;
+  height: 5svh;
+  padding: .5svh;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition-delay: .25s;
+}
+
+.toggle__btn span{
+  position: absolute;
+  width: 3.5svh;
+  height: .4svh;
+  background: #FFFFFF;
+  border-radius: 4px;
+  transition-delay: .25s;
+  transition: 0.5s;
+}
+
+.toggle__btn span:nth-child(1){
+  transform: translateY(-1.2dvh);
+  width: 2.5svh;
+  left: .8svh;
+  transition-delay: .25s;
+  transition: .5s;
+}
+
+.toggle__btn.active span:nth-child(1){
+  width: 4dvh;
+  left: 0.3dvh;
+  transform: translateY(0dvh) rotate(45deg);
+}
+
+.toggle__btn span:nth-child(2){
+  transform: translateY(1.2dvh);
+  width: 2dvh;
+  left: .8dvh;
+  transition-delay: .25s;
+  transition: .5s;
+}
+
+.toggle__btn.active span:nth-child(2){
+  width: 4svh;
+  left: 0.3svh;
+  transform: translateY(0dvh) rotate(315deg);
+}
+
+.toggle__btn.active span:nth-child(3){
+  transform: translateX(7svh);
+}
+
+
+
+/* ========================================================================
+==========   HERO STYLUNGS WILL BEGIN HERE ===============================
+======================================================================*/
+.hero{
+  position: relative;
+  color: var(--section-bg-color);
+  background: url("../imgs/herobg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 90svh;
+  padding: 1svh;
+  width: 100%;
+  border-bottom-right-radius: 20svh;
+  z-index: 4;
+}
+
+.backgroundBlur{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(25, 25, 0, 0.8);
+  filter: blur(1px);
+  z-index: -10;
+  border-bottom-right-radius: 20dvh;
+}
+
+
+.herotext{
+  padding: 3svh;
+  text-align: center;
+  z-index: 4;
+}
+
+
+.herotextt{
+  font-family: system-ui, -apple-system,BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 5svh;
+  font-weight: 600;
+  text-transform: uppercase;
+  z-index: 4;
+}
+
+#audiences{
+  color: var(--body-bg-color);
+  border-bottom: .5svh solid var(--section-bg-color);
+  animation: bganimate 2s ease-in 2s alternate infinite; ;
+  z-index: 4;
+}
+
+@keyframes bganimate{
+  0%{
+    translateY: 2svh;
+    font-size: 5svh;
+  }
+  100%{
+    translateY: 0svh;
+    font-size: 7svh;
+  }
+}
+
+/* ========= hero carousel style =======*/
+.hero__carousel{
+  position: relative;
+  width: 100%;
+  z-index: 10;
+  overflow: auto;
+}
+
+.hero__carousel button{
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  font-size: x-large;
+  background: #eee5;
+  width: 4svh;
+  height: 4svh;
+  border: .7svh;
+  color: #fff;
+}
+
+.hero__carousel button.btn--left{
+  left: 5%;
+}
+
+.hero__carousel button.btn--right{
+  right: 5%;
+}
+
+.hero__carousel .carousel{
+  z-index: 4;
+  display: flex;
+  gap: 2svh;
+  width: 100%;
+  overflow-x: auto;
+  aspect-ratio: 16/9;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 0 .5svh;
+  align-items: center;
+}
+
+.hero__carousel .carousel::-webkit-scrollbar{
+    width: 0;
+}
+
+.hero__carousel .carousel .carousel__slides{
+  list-style-type: none;
+  text-align: center;
+  font-size: 5.5svh;
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+}
+
+
+
+
+/* ================================================
+========== About us styling section =========
+=================================================*/
+.about{
+  position: relative;
+  padding: var(--body-padding-margin);
+}
+
+.about__grid{
+  justify-content: center;
+  align-items: stretch;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(360px, 1fr));
+}
+
+.about div{
+  font-family: system-ui, sans-serif;
+  font-weight: 300;
+  margin: .8svh;
+}
+
+.about div p{
+  font-size: 2svh;
+  font-family: system-ui, sans-serif;
+  font-weight: 300;
+  margin: 3svh;
+} 
+
+
+
+/* ==============================================
+=============== services section ====================
+===========================================*/
+/* === services ===*/
+.services{
+  position: relative;
+  height: 100svh;
+}
+
+.servicesCarousel_wrapper .slide{
+  position: absolute;
+  inset: 0 0 0 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: .5s;
+}
+
+.servicesCarousel_wrapper .slide img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.servicesCarousel_wrapper .slide::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-image: linear-gradient(to bottom, #000 5%, transparent)
+}
+
+.servicesCarousel_wrapper .slide .servicesContent{
+  color: var(--section-bg-color);
+  padding: .2svh;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 500px;
+  max-width: 80%;
+  z-index: 1;
+}
+
+.servicesCarousel_wrapper .slide .servicesContent p{
+  text-transform: lowercase;
+  font-size:  2svh;
+  font-weight: 300;
+  color: #fff;
+}
+
+.servicesCarousel_wrapper .slide .servicesContent .head{
+  font-size: 2.5svh;
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: .3svh;
+}
+
+.servicesCarousel_wrapper .slide.active{
+  opacity: 1;
+  z-index: 10;
+}
+
+@keyframes showContent{
+  to{
+    transform: translateY(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.servicesCarousel_wrapper .slide .servicesContent p, 
+.servicesCarousel_wrapper .slide .servicesContent .head{
+  transform: translateX(30px);
+  filter: blur(20px);
+  opacity: 0;
+  animation: showContent .5s .7s ease-in-out 1 forwards;
+}
+
+.services .btnArrows{
+  position: absolute;
+  top: 8%;
+  right: 8%;
+  z-index: 40;
+  padding: .5svh;
+}
+
+.services .btnArrows button{
+  background: #eee5;
+  border: none;
+  width: 4svh;
+  height: 4svh;
+  font-size: x-large;
+  border-radius: .5svh;
+  color: #fff;
+  transition: .5s;
+}
+
+.services .btnArrows button:hover{
+  background: #fff;
+  color: #000;
+}
+
+.imgThumbnailSlides{
+  list-style: none;
+  position: absolute;
+  bottom: .9svh;
+  z-index: 11;
+  overflow-x: auto;
+  padding: 0 1.5svh;
+  display: flex;
+  gap: 1.2svh;
+  width: 100%;
+  height: 20svh;
+  box-sizing: border-box;
+  aspect-ratio: 16/9;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.imgThumbnailSlides::-webkit-scrollbar{
+  width: 0;
+}
+
+.imgThumbnailSlides  .imgThumbnailsItems{
+  width: 40svh;
+  height: 40svh;
+  filter: brightness(.5);
+  transition: .5s;
+  flex: 0 0 50%;
+  scroll-snap-align: start;
+  object-fit: cover;
+}
+
+.imgThumbnailSlides  .imgThumbnailsItems img{
+  width: 100%;
+  height: 100%;
+  border-radius: .5svh;
+  object-fit: cover;
+}
+
+.imgThumbnailSlides  .imgThumbnailsItems.active{
+  filter: brightness(1.2);
+}
+
+.imgThumbnailSlides  .imgThumbnailsItems .imgThumbnailsContent{
+  position: absolute;
+  color: #f6a702;
+  text-transform: uppercase;
+  inset: .9svh .9svh .9svh .9svh;
+}
+
+
+
+
+/* ===============================================================================
+============ Testimonial section styling begins at this point ===================
+================================================================================*/
+.testimonials{
+  padding: var(--body-padding-margin);
+  justify-content: center;
+  align-items: center;
+  background-color: var(--body-bg-color);
+  font-size: 2svh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.testCard{
+  margin: 1svh;
+  padding: var(--body-padding-margin);
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+  font-size: 2svh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+
+/* ====================================
+footer styling begins at this point
+======================================*/
+.contact{
+  background: var(--footer-bg-color);
+  padding: var(--footer-padding-margin);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #F6A702;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 2svh;
+  font-weight: 300;
+}
+
+.socialIcons{
+  padding: 4svh;
+  margin-bottom: 10svh;
+  font-size: 4svh;
+  color: #F6A702;
+  text-align: center;
+}
+
+.socialIconsList{
+  display: flex;
+  gap: 2svh;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.iconsLinks{
+  text-decoration: none;
+  color: var(--section-bg-color);
+  cursor: pointer;
+}
+
+.iconsLinks:hover{
+  color: var(--body-bg-color);
+  font-size: 3.5svh;
+}
+
+.contactDetails{
+  margin-bottom: 5svh;
+  font-size: 2svh;
+  font-weight: 300;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===============================================
+============== For mobile devices ================
+==================================================*/
+@media only screen and (min-width: 250px) and (max-width:800px){
+  .nav__unorderedlist{
+  position: absolute;
+  top: .5dvh;
+  left: -500svh;
+  z-index: 1;
+  padding: 3svh;
+  list-style-type: none;
+  background-color: var(--body-bg-color);
+  width: 50%;
+  height: 55svh;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  transition-delay: .25s;
+  transition-timing-function: ease-in;
+  transition: 1s;
+}
+
+.nav__unorderedlist.show-menu{
+  left: .5dvh;
+}
+
+[class*=paragraghHidden]{
+  display: none;
+}
+
+[class*=paragraghHidden].show{
+  display: block;
+}
+
+.readMoreBtn{
+  border: .5svh solid #f6a702;
+  border-radius: 3svh;
+  background: #f6a702;
+  color: var(--body-bg-color);
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+  padding: .5svh;
+  font-size: 2svh;
+  width: 18svh;
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  bottom: 3dvh;
+  left: 30%;
+  z-index: 3;
+}
+
+.readMoreBtn:hover{
+  background: none;
+  color: #f6a702;
+  width: 13svh;
+  position: absolute;
+  bottom: 3dvh;
+  left: 35%;
+  z-index: 3;
+}
+
+.readMoreBtn.hide{
+  display:none;
+}
+
+.hero{
+  position: relative;
+  color: var(--section-bg-color);
+  background: url("../imgs/herobg.jpg");
+  background-position: center top;
+  height: 90svh;
+  padding: 1svh;
+  width: 100%;
+  border-bottom-right-radius: 20dvh;
+}
+
+/* ========== services ============*/
+imgThumbnailSlides{
+  justify-content: start;
+}
+
+.servicesCarousel_wrapper .slide .servicesContent .head{
+  font-size: 1.8svh;
+  font-weight: 700;
+}
+
+.services .btnArrows{
+  top: 5%;
+}
+}
+
+
+/* ===========================================================
+============== For tablet devices =============================
+============================================================*/
+@media only screen and (min-width: 800px) and (max-width:1279px){
+.navheader{
+  height: 8svh;
+  display: flex;
+  gap: 1svh;
+}
+.navigation{
+  display: flex;
+  gap: 1svh;
+}
+
+#logo{
+  width: 5dvh;
+  height: 5dvh;
+}
+
+#brand__name{
+  font-family: system-ui, Sans-Serif;
+  font-weight: 600;
+  font-size: 1.7dvh;
+  padding-left: .5svh;
+  padding-right: .5svh;
+}
+  
+.nav__unorderedlist{
+  display: flex;
+  padding: 1svh;
+  list-style-type: none;
+  font-size: 1svb;
+  font-weight: 700;
+}
+
+#nav__list{
+  padding: .6svh;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 1s;
+  transition-delay: .2s;
+  transition-timing-function: ease-in;
+}
+
+#nav__list:hover{
+  color: var(--body-bg-color);
+  background-color: var(--section-bg-color);
+  cursor: pointer;
+}
+
+#nav__links{
+  text-decoration: none;
+  color: #000;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+  font-size: 1.5svh;
+  font-weight: 700;
+}
+
+
+#toggle__btn{
+    display: none;
+  }
+
+
+/* ========== =Hero sfyles ========== */ 
+.hero{
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: start;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+}
+.herotext{
+  padding: 1.5svh;
+  z-index: 4;
+}
+
+.herotextt{
+  font-family: system-ui, -apple-system,BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 5svh;
+  font-weight: 600;
+  text-transform: uppercase;
+  z-index: 4;
+}
+
+#audiences{
+  color: var(--body-bg-color);
+  border-bottom: .5svh solid var(--section-bg-color);
+  animation: bganimate 2s ease-in 2s alternate infinite; ;
+  z-index: 4;
+}
+
+@keyframes bganimate{
+  0%{
+    translateY: 2svh;
+    font-size: 5svh;
+  }
+  100%{
+    translateY: 0svh;
+    font-size: 7svh;
+  }
+}
+
+.readMoreBtn{
+  display: none;
+}
+
+.hero{
+  position: relative;
+  color: var(--section-bg-color);
+  background: url("../imgs/herobg.jpg");
+  height: 90svh;
+  padding: 1svh;
+  width: 100%;
+  border-bottom-right-radius: 20dvh;
+}
+
+.imgThumbnailSlides{
+  display: flex;
+  gap: 1.5svh;
+}
+
+.imgThumbnailSlides  .imgThumbnailsItems{
+  flex: 0 0 25%;
+}
+}
+
+
+
+/* ==============================================================
+=========== for laptops and large screen devices ===============
+===============================================================*/
+@media only screen and (min-width:1280px){
+.navigation{
+  display: flex;
+  gap: 1svh;
+  padding-left: 2.5svh;
+}
+
+#logo{
+  width: 7svh;
+  height: 7svh;
+}
+
+#brand__name{
+  font-family: system-ui, Sans-Serif;
+  font-weight: 600;
+  font-size: 2.7dvh;
+  padding-left: 1.5svh;
+  padding-right: 10.5svh;
+}
+  
+.nav__unorderedlist{
+  display: flex;
+  padding: 1svh;
+  list-style-type: none;
+}
+
+#nav__list{
+  padding: .6svh;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 1s;
+  transition-delay: .2s;
+  transition-timing-function: ease-in;
+}
+
+#nav__list:hover{
+  color: var(--body-bg-color);
+  background-color: var(--section-bg-color);
+  cursor: pointer;
+}
+
+#nav__links{
+  text-decoration: none;
+  color: #000;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+  font-size: 3.0svh;
+  font-weight: 700;
+}
+
+
+#toggle__btn{
+    display: none;
+  }
+  
+.readMoreBtn{
+  display: none;
+}
+
+.hero{
+  position: relative;
+  color: var(--section-bg-color);
+  background: url("../imgs/herobg.jpg");
+  height: 90svh;
+  padding: 1svh;
+  width: 100%;
+  border-bottom-right-radius: 20dvh;
+}
+
+.hero{
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: start;
+  align-items: center;
+}
+.herotext{
+  padding: 1.5svh;
+  z-index: 4;
+}
+
+.herotextt{
+  font-family: system-ui, -apple-system,BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 5svh;
+  font-weight: 600;
+  text-transform: uppercase;
+  z-index: 4;
+}
+
+#audiences{
+  color: var(--body-bg-color);
+  border-bottom: .5svh solid var(--section-bg-color);
+  animation: bganimate 2s ease-in 2s alternate infinite; ;
+  z-index: 4;
+}
+
+@keyframes bganimate{
+  0%{
+    translateY: 2svh;
+    font-size: 5svh;
+  }
+  100%{
+    translateY: 0svh;
+    font-size: 7svh;
+  }
+}
+
+.imgThumbnailSlides{
+  gap: 1.5svh;
+}
+
+.imgThumbnailSlides  .imgThumbnailsItems{
+  flex: 0 0 25%;
+}
+
+
+
+}
+
+
+
